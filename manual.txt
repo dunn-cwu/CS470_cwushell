@@ -1,0 +1,67 @@
+===[ cwshell User Manual ]===
+
+Created by: Andrew Dunn
+School: Central Washington University
+Course: CS470 Operating Systems
+Assignment: Lab 1
+
+== Package/System Requirements ==
+
+This program was developed on Ubuntu 18.10, but should work on other linux distros.
+
+To build this program you need gcc installed on your system.
+
+== Build and Run Instructions ==
+
+First, open a terminal in the 'cwushell.c' source directory.
+
+To build, execute the following command in the terminal:
+
+gcc -o cwushell cwushell.c
+
+To run, execute the following command in the terminal:
+
+./cwushell
+
+== Usage Instructions ==
+
+cwushell has the following built-in commands:
+
+> manual
+Prints the contents of this file.
+
+> exit [code]
+Exit cwushell with the optional exit code.
+If [code] argument is left blank, cwushell exits with 0,
+or with the return code from the last command.
+
+> prompt [new prompt]
+Changes the terminal prompt to the given string.
+The [new prompt] argument is required.
+
+> cd [path]
+Changes the current working directory to the given path.
+The [path] argument is required.
+
+> cpuinfo [-switch]
+Prints various information about the CPU in your system depending on the given switch.
+The [-switch] argument is required.
+Valid switches:
+  -help: Prints list of valid command switches.
+  -c:    Prints your cpu clock speed.
+  -t:    Prints your cpu type.
+  -n:    Prints your cpu core count.
+
+> meminfo [-switch]
+Prints various information about the RAM in your system depending on the given switch.
+The [-switch] argument is required.
+Valid switches:
+  -help: Prints list of valid command switches.
+  -t:    Prints total available RAM.
+  -u:    Prints currently used RAM.
+  -c:    Prints size of L2 cache.
+
+========
+
+cwushell can also run normal shell commands, which are externally executed using 'sh -c'.
+
